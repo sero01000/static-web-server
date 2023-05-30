@@ -59,13 +59,13 @@ jobs:
             target: armv7-unknown-linux-musleabi
             bin: ${{ github.event.repository.name }}
             name: ${{ github.event.repository.name }}-Linux-armv7-musleabi.tar.gz
-            
-          - os_name: Linux-i686-musl
-            os: ubuntu-20.04
-            target: i686-unknown-linux-musl
-            bin: ${{ github.event.repository.name }}
-            name: ${{ github.event.repository.name }}-Linux-i686-musl.tar.gz
-            skip_tests: true
+#build error 
+#           - os_name: Linux-i686-musl
+#             os: ubuntu-20.04
+#             target: i686-unknown-linux-musl
+#             bin: ${{ github.event.repository.name }}
+#             name: ${{ github.event.repository.name }}-Linux-i686-musl.tar.gz
+#             skip_tests: true
 # ring not supported risc-v
 #           - os_name: Linux-riscv64
 #             os: ubuntu-20.04
