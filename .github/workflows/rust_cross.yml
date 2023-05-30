@@ -66,12 +66,12 @@ jobs:
             bin: ${{ github.event.repository.name }}
             name: ${{ github.event.repository.name }}-Linux-i686-musl.tar.gz
             skip_tests: true
-          
-          - os_name: Linux-riscv64
-            os: ubuntu-20.04
-            target: riscv64gc-unknown-linux-gnu
-            bin: ${{ github.event.repository.name }}
-            name: ${{ github.event.repository.name }}-Linux-riscv64gc-gnu.tar.gz
+# ring not supported risc-v
+#           - os_name: Linux-riscv64
+#             os: ubuntu-20.04
+#             target: riscv64gc-unknown-linux-gnu
+#             bin: ${{ github.event.repository.name }}
+#             name: ${{ github.event.repository.name }}-Linux-riscv64gc-gnu.tar.gz
 
           - os_name: FreeBSD-x86_64
             os: ubuntu-20.04
