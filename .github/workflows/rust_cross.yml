@@ -59,13 +59,16 @@ jobs:
             target: armv7-unknown-linux-musleabi
             bin: ${{ github.event.repository.name }}
             name: ${{ github.event.repository.name }}-Linux-armv7-musleabi.tar.gz
-#build error 
+            
+# Error: failed to run custom build command for `ring v0.16.20`
+# OPENSSL_STATIC_ASSERT
 #           - os_name: Linux-i686-musl
 #             os: ubuntu-20.04
 #             target: i686-unknown-linux-musl
 #             bin: ${{ github.event.repository.name }}
 #             name: ${{ github.event.repository.name }}-Linux-i686-musl.tar.gz
 #             skip_tests: true
+
 # ring not supported risc-v
 #           - os_name: Linux-riscv64
 #             os: ubuntu-20.04
@@ -134,12 +137,14 @@ jobs:
 #             target: aarch64-linux-android
 #             bin: ${{ github.event.repository.name }}
 #             name: ${{ github.event.repository.name }}-aarch64-linux-android.tar.gz
-            
-          - os_name: Android-armv7
-            os: ubuntu-22.04
-            target: armv7-linux-androideabi
-            bin: ${{ github.event.repository.name }}
-            name: ${{ github.event.repository.name }}-Android-armv7.tar.gz
+
+# Error: mismatched types
+# Compiling listenfd v1.0.1
+#           - os_name: Android-armv7
+#             os: ubuntu-22.04
+#             target: armv7-linux-androideabi
+#             bin: ${{ github.event.repository.name }}
+#             name: ${{ github.event.repository.name }}-Android-armv7.tar.gz
             
         toolchain:
           - stable
